@@ -1,5 +1,6 @@
 import React, { FunctionComponent } from "react";
 import {
+  ImageBackground,
   View,
   Text,
   TouchableOpacity,
@@ -22,12 +23,15 @@ const styles = StyleSheet.create({
     flex: 1,
     width: "100%",
     alignItems: "center",
-    justifyContent: "center"
+    justifyContent: "center",
+    backgroundColor: "white"
   },
   callout: {
-    width: 240,
+    width: 270,
     borderRadius: borderRadius(3),
-    backgroundColor: color("grey", 0),
+    //backgroundColor: color("grey", 0), 
+    //paddingVertical: size(3),
+    
     ...shadow(1)
   },
   calloutText: {
@@ -39,9 +43,9 @@ const styles = StyleSheet.create({
     backgroundColor: color("orange", 30),
     flexDirection: "row",
     alignItems: "center",
-    height: size(6),
+    height: size(10),
     paddingHorizontal: size(3),
-    borderRadius: borderRadius(3),
+    borderRadius: borderRadius(5),
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0
   },
@@ -49,17 +53,28 @@ const styles = StyleSheet.create({
     color: color("grey", 40),
     fontWeight: "bold",
     marginLeft: size(1.5)
-  }
+  },
+  image: {
+    flex: 1,
+    resizeMode: "cover",
+    justifyContent: "center",
+    width: "100"
+  },
 });
-
+const image = { uri: "https://reactjs.org/logo-og.png" };
 interface EmptyDocumentList {
   onAdd: () => void;
 }
-
 export const EmptyDocumentList: FunctionComponent<EmptyDocumentList> = ({
   onAdd
 }) => (
   <View testID="empty-document-list" style={styles.emptyDocumentList}>
+
+  <ImageBackground source={require('../../assets/empty_bg.jpeg')} style={styles.image}>
+  <View style={styles.callout}>
+      </View>
+  </ImageBackground>
+    
     <View style={styles.callout}>
       <Text style={styles.calloutText}>
         Start by adding a licence to your wallet
@@ -75,7 +90,7 @@ export const EmptyDocumentList: FunctionComponent<EmptyDocumentList> = ({
         ) : (
           <QRIcon width={20} height={20} fill={color("grey", 40)} />
         )}
-        <Text style={styles.calloutButtonText}>Scan to add</Text>
+        <Text style={styles.calloutButtonText}>Scan to add licence</Text>
       </TouchableOpacity>
     </View>
   </View>

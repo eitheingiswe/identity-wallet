@@ -1,18 +1,17 @@
 {
   "expo": {
-    "name": "Identity Wallet",
-    "slug": "identitywallet",
+    "name": "SGFlight",
+    "slug": "SGFlight",
     "privacy": "public",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "version": "1.0.0",
+    "scheme": "sgflight",
+    "version": "1.0.6",
     "orientation": "portrait",
-    "icon": "./assets/icon.png",
-    "sdkVersion":"37.0.0",
-    "scheme": "identitywallet",
+    "icon": "./assets/Logo.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
@@ -25,7 +24,24 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "bundleIdentifier": "sg.gov.caas.SGFlight",
+      "buildNumber": "1.0.6",
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSCameraUsageDescription": "This app requires to access your camera to scan QRcode"
+      }
+    },
+    "android": {
+      "package": "sg.gov.caas.SGFlight",
+      "versionCode": 7,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/Logo.png",
+        "backgroundColor": "#171717"
+      },
+      "permissions": [
+        "CAMERA",
+        "WRITE_EXTERNAL_STORAGE"
+      ]
     },
     "packagerOpts": {
       "config": "metro.config.js",

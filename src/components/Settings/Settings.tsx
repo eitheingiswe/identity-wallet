@@ -32,6 +32,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: size(1.5)
   },
+  settingsItemHide: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    marginBottom: size(1.5),
+    display: "none"
+  },
   settingsItemDescription: {
     marginRight: size(2),
     fontSize: fontSize(0)
@@ -79,17 +86,17 @@ export const Settings: FunctionComponent<Settings> = ({
   const onToggleNetwork = (): void => {
     setConfigValue(
       "network",
-      config.network === NetworkTypes.ropsten
-        ? NetworkTypes.mainnet
-        : NetworkTypes.ropsten
+      config.network === NetworkTypes.mainnet
+        ? NetworkTypes.ropsten
+        : NetworkTypes.mainnet
     );
   };
   const onToggleVerifier = (): void => {
     setConfigValue(
       "verifier",
-      config.verifier === VerifierTypes.OpenAttestation
-        ? VerifierTypes.OpenCerts
-        : VerifierTypes.OpenAttestation
+      config.verifier === VerifierTypes.OpenCerts
+        ? VerifierTypes.OpenAttestation
+        : VerifierTypes.OpenCerts
     );
   };
   return (

@@ -34,11 +34,11 @@ export type DatabaseCollections = {
 export type Database = RxDatabase<DatabaseCollections>;
 
 export enum NetworkTypes {
-  ropsten = "ropsten",
-  mainnet = "mainnet"
+  mainnet = "mainnet",
+  ropsten = "ropsten"
 }
 
 export enum VerifierTypes {
-  OpenAttestation = "OpenAttestation",
-  OpenCerts = "OpenCerts"
+  OpenCerts = "OpenCerts",
+  OpenAttestation = "OpenAttestation"
 }

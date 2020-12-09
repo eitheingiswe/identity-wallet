@@ -46,7 +46,8 @@ const BackgroundOverlay: FunctionComponent<BackgroundOverlay> = ({
   React.useEffect(() => {
     Animated.timing(fadeAnim, {
       toValue: isVisible ? 0.8 : 0,
-      duration: 300
+      duration: 300,
+      useNativeDriver: true
     }).start();
   }, [fadeAnim, isVisible]);
 
@@ -163,7 +164,8 @@ const ShareButton: FunctionComponent<ShareButton> = ({
     setIsAnimating(true);
     Animated.timing(fadeAnim, {
       toValue: isSheetOpen ? 0 : 1,
-      duration: 300
+      duration: 300,
+      useNativeDriver: true
     }).start(() => setIsAnimating(false));
   }, [fadeAnim, isSheetOpen]);
 

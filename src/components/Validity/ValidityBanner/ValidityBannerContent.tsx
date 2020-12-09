@@ -32,14 +32,15 @@ export const ValidityBannerContent: FunctionComponent<ValidityBannerContent> = (
     Animated.timing(heightAnimation.current, {
       toValue: isExpanded ? maxHeight : 0,
       duration: 300,
-      easing: Easing.out(Easing.quad)
+      easing: Easing.out(Easing.quad),
+      useNativeDriver: true,
     }).start();
   }, [isExpanded, maxHeight]);
 
   return (
     <Animated.View
       style={{
-        height: heightAnimation.current,
+        scaleY: heightAnimation.current,
         paddingHorizontal: size(3),
         backgroundColor,
         overflow: "hidden"

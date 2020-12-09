@@ -21,8 +21,8 @@ interface ConfigContext {
 
 const CONFIG_KEY = "CONFIG";
 const DEFAULT_CONFIG: Config = {
-  network: NetworkTypes.ropsten,
-  verifier: VerifierTypes.OpenAttestation
+  network: NetworkTypes.mainnet,
+  verifier: VerifierTypes.OpenCerts
 };
 
 const ConfigContext = createContext<ConfigContext>({

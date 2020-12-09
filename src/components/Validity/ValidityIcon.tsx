@@ -21,7 +21,8 @@ export const ValidityIcon: FunctionComponent<ValidityIcon> = ({
     animationTiming.current = Animated.timing(rotationAnimation.current, {
       toValue: 1,
       duration: 1000,
-      easing: Easing.linear
+      easing: Easing.linear,
+      useNativeDriver: true
     });
   });
 
