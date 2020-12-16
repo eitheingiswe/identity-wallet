@@ -1,6 +1,6 @@
 import React, { FunctionComponent } from "react";
 import {
-  ImageBackground,
+  Image,
   View,
   Text,
   TouchableOpacity,
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     backgroundColor: "white"
   },
   callout: {
-    width: 270,
+    width: "80%",
     borderRadius: borderRadius(3),
     //backgroundColor: color("grey", 0), 
     //paddingVertical: size(3),
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     height: size(10),
     paddingHorizontal: size(3),
-    borderRadius: borderRadius(5),
+    borderRadius: borderRadius(3),
     borderTopLeftRadius: 0,
     borderTopRightRadius: 0
   },
@@ -56,9 +56,7 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
-    resizeMode: "cover",
-    justifyContent: "center",
-    width: "100"
+    resizeMode: "contain",
   },
 });
 const image = { uri: "https://reactjs.org/logo-og.png" };
@@ -70,15 +68,10 @@ export const EmptyDocumentList: FunctionComponent<EmptyDocumentList> = ({
 }) => (
   <View testID="empty-document-list" style={styles.emptyDocumentList}>
 
-  <ImageBackground source={require('../../assets/empty_bg.jpeg')} style={styles.image}>
-  <View style={styles.callout}>
-      </View>
-  </ImageBackground>
+    <Image source={require('../../assets/empty_bg.jpeg')} style={styles.image}>
+    </Image>
     
     <View style={styles.callout}>
-      <Text style={styles.calloutText}>
-        Start by adding a licence to your wallet
-      </Text>
 
       <TouchableOpacity
         testID="scanner-button"
