@@ -9,7 +9,7 @@
       "web"
     ],
     "scheme": "sgflight",
-    "version": "1.0.6",
+    "version": "1.0.10",
     "orientation": "portrait",
     "icon": "./assets/Logo.png",
     "splash": {
@@ -25,15 +25,18 @@
     ],
     "ios": {
       "bundleIdentifier": "sg.gov.caas.SGFlight",
-      "buildNumber": "1.0.6",
+      "buildNumber": "1.0.10",
       "supportsTablet": true,
       "infoPlist": {
         "NSCameraUsageDescription": "This app requires to access your camera to scan QRcode"
-      }
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+     }
     },
     "android": {
       "package": "sg.gov.caas.SGFlight",
-      "versionCode": 7,
+      "versionCode": 11,
       "adaptiveIcon": {
         "foregroundImage": "./assets/Logo.png",
         "backgroundColor": "#171717"

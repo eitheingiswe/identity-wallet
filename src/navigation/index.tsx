@@ -4,7 +4,7 @@ import { DbContextProvider } from "../context/db";
 import StackNavigator from "./StackNavigator";
 import { StatusBar, View, Platform } from "react-native";
 import InitialisationScreen from "./InitialisationScreen";
-import { Linking } from "expo";
+import * as Linking from "expo-linking";
 import { NetworkContextProvider } from "../context/network";
 import { ConfigContextProvider } from "../context/config";
 import { FontLoader } from "../components/FontLoader";

@@ -61,7 +61,7 @@ export const SettingsView: FunctionComponent<{
         <Text style={styles.settingsItemDescription}>Delete all documents</Text>
         <DarkButton text="Delete" onPress={onResetDocumentData} />
       </View>
-      <View style={styles.settingsItem}>
+      <View style={styles.settingsItemHide}>
         <Text style={styles.settingsItemDescription}>
           Switch verification network
         </Text>
@@ -70,7 +70,7 @@ export const SettingsView: FunctionComponent<{
           onPress={onToggleNetwork}
         />
       </View>
-      <View style={styles.settingsItem}>
+      <View style={styles.settingsItemHide}>
         <Text style={styles.settingsItemDescription}>Switch Verifier</Text>
         <DarkButton text={config.verifier} onPress={onToggleVerifier} />
       </View>

@@ -30,7 +30,7 @@ const resolveIssuerIdentity = async (
     return matchingRecord
       ? {
           identified: true,
-          dns: get(issuer, "identityProof.location"),
+          dns: get(issuer, "identityProof."),
           smartContract: smartContractAddress
         }
       : {
