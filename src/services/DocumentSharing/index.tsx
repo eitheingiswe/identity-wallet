@@ -45,7 +45,7 @@ export const uploadDocument = async (
     })
   );
   return {
-    url: `https://action.openattestation.com?q=${payload}`,
+    url: `https://action_enforcer.openattestation.com?q=${payload}`,
     expiry: response.ttl || undefined
   };
 };
