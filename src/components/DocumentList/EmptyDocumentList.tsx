@@ -68,7 +68,7 @@ export const EmptyDocumentList: FunctionComponent<EmptyDocumentList> = ({
 }) => (
   <View testID="empty-document-list" style={styles.emptyDocumentList}>
 
-    <Image source={require('../../assets/empty_bg.jpeg')} style={styles.image}>
+    <Image source={require('../../assets/new_bg.png')} style={styles.image}>
     </Image>
     
     <View style={styles.callout}>
