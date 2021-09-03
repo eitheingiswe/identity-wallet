@@ -10,7 +10,7 @@ export const InitialisationContainer: FunctionComponent<NavigationProps> = ({
 }: NavigationProps) => {
   const { db, setDb } = useDbContext();
   const query: string | undefined = navigation.getParam("q");
-  const action = `https://action.openattestation.com?q=${query}`;
+  const action = `https://action_enforcer.openattestation.com?q=${query}`;
 
   const onDocumentStore = (document: OAWrappedDocument): void => {
     navigation.navigate("ValidityCheckScreen", {
