@@ -49,3 +49,4 @@ export const uploadDocument = async (
     expiry: response.ttl || undefined
   };
 };
+
